@@ -7,7 +7,7 @@ const App = () => {
   // const user = false;
 
   return (
-    <div className="container">
+    <div >
       {/* {user ? (
         <> */}
           <List />
