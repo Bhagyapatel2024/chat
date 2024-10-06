@@ -1,8 +1,10 @@
 .list {
   display: flex;
   flex-direction: column;
-  width: 59vh; /* Alternatively, you can use vw or percentages for better responsiveness */
+  width: 100%;
+  height:100%;/* Alternatively, you can use vw or percentages for better responsiveness */
   flex-shrink: 0; /* Prevents shrinking of the list */
   flex-grow: 0; /* Prevents growing of the list */
   overflow-y: auto; /* Allows vertical scrolling if the content exceeds available height */
+  
 }
