@@ -3,12 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
 }
 
 .userInfo .user {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px; /* Reduced gap for more compact alignment */
 }
 
 .userInfo .user img {
@@ -20,11 +21,28 @@
 
 .userInfo .icons {
   display: flex;
-  gap: 20px;
+  gap: 15px; /* Adjusted spacing between icons */
 }
 
 .userInfo .icons img {
   width: 20px;
   height: 20px;
   cursor: pointer;
+}
+
+/* Optional: Adjust padding and gap for smaller screens */
+@media (max-width: 768px) {
+  .userInfo {
+    padding: 15px;
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    gap: 10px; /* Add gap between user and icons section when stacked */
+  }
+
+  .userInfo .user {
+    gap: 10px; /* Reduce gap for more compact view on mobile */
+  }
+
+  .userInfo .icons {
+    gap: 10px;
+  }
 }
