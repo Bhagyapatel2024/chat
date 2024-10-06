@@ -1,112 +1,86 @@
-/* Reset and General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
-  
-  body {
-    background-image: url("/bg.jpg");
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; 
-    color: white;
-  }
-  
-  /* Container Styles */
-  .container {
-    width: 80vw;
-    height: 90vh;
-    background-color: rgba(17, 25, 40, 0.75);
-    backdrop-filter: blur(19px) saturate(180%);
-    border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    display: flex;
-  }
-  
-  /* Detail Component Styles */
-  .detail {
+.detail {
     flex: 1;
-  }
-  
-  .detail .user {
-    padding: 20px; /* Reduce padding */
+}
+
+.detail .user {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px; /* Reduce the gap between elements */
+    gap: 2px;
     border-bottom: 1px solid rgba(221, 221, 221, 0.2);
-    max-width: 250px; /* Limit the maximum width of the user section */
-    flex-basis: 250px; /* Set a base width for the user section */
-  }
-  
-  
-  .detail .user img {
+    max-width: 250px;
+    flex-basis: 250px;
+}
+
+.detail .user img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-  }
-  
-  .info {
+}
+
+/* Info and Option Sections */
+.info {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Ensure there's space between options and buttons */
-  }
-  
-  .option .title {
+    gap: 30px;
+    overflow-y: auto; /* Allows scrolling in case of overflow */
+}
+
+.option .title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .option .title img,
-  .icon {
+}
+
+.option .title img,
+.icon {
     width: 30px;
     height: 30px;
     background-color: rgba(17, 25, 40, 0.3);
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-  }
-  
-  .photos {
+}
+
+/* Photos Section */
+.photos {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: 20px;
-  }
-  
-  .photoItem {
+}
+
+.photoItem {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .photoItem span,
-  .photoDetail span {
+}
+
+.photoItem span,
+.photoDetail span {
     font-size: 14px;
     color: lightgray;
     font-weight: 300;
-  }
-  
-  .photoDetail {
+}
+
+.photoDetail {
     display: flex;
     align-items: center;
     gap: 20px;
-  }
-  
-  .photoDetail img {
+}
+
+.photoDetail img {
     width: 40px;
     height: 40px;
     border-radius: 5px;
     object-fit: cover;
-  }
-  
-  button {
+}
+
+/* Buttons */
+button {
     padding: 10px 20px;
     background-color: rgba(230, 74, 105, 0.55);
     color: white;
@@ -114,17 +88,54 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: rgba(220, 20, 60, 0.8);
-  }
-  
-  button.logout {
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(220, 20, 60, 0.8);
+}
+
+button.logout {
     background-color: #1a73e8;
-  }
-  
-  button.logout:hover {
+}
+
+button.logout:hover {
     background-color: #1665c0;
-  }
-  
+}
+
+button.logout:focus {
+    outline: none;
+    box-shadow: 0 0 5px #1665c0;
+}
+
+/* Scrollbar Styling */
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: rgba(17, 25, 40, 0.3);
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: rgba(230, 74, 105, 0.55);
+    border-radius: 4px;
+}
+
+/* Mobile Adjustments */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks content vertically */
+        width: 90vw;
+        height: auto;
+    }
+
+    .detail .user {
+        max-width: 100%; /* Full width on mobile */
+        flex-basis: auto;
+    }
+}
