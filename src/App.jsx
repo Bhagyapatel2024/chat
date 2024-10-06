@@ -11,8 +11,8 @@ const App = () => {
       {/* {user ? (
         <> */}
           <List />
-          <Chat />
-          <Detail />
+{/*           <Chat />
+          <Detail /> */}
         {/* </>
       ) : (
         <Login /> */}
