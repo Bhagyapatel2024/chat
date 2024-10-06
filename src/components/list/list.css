@@ -1,7 +1,8 @@
 .list {
-  flex: 0;
   display: flex;
   flex-direction: column;
-  width: 59vh;
- 
+  width: 59vh; /* Alternatively, you can use vw or percentages for better responsiveness */
+  flex-shrink: 0; /* Prevents shrinking of the list */
+  flex-grow: 0; /* Prevents growing of the list */
+  overflow-y: auto; /* Allows vertical scrolling if the content exceeds available height */
 }
