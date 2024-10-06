@@ -1,47 +1,28 @@
+/* Reset and General Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-image: url("/P9.png");
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  color: white;
-}
-
-.container {
-  width: 80vw;
-  height: 96vh;
-  background-color: rgb(15, 35, 48);
-  backdrop-filter: blur(19px) saturate(180%);
-  border-radius: 12px;
-  border: 1px solid rgb(0, 0, 0);
-  display: flex;
-  padding: 20px;
-}
-
-/* Mobile optimization */
-@media only screen and (max-width: 768px) {
-  body {
-    height: auto;
-    padding: 20px;
-  }
-
-  .container {
-    width: 90vw; /* Adjust to fit the mobile screen */
-    height: auto; /* Let the height be flexible */
-    padding: 15px; /* Add padding to avoid content touching edges */
-    flex-direction: column; /* Stack items vertically */
+    background-image: url("/bg.jpg");
+    display: flex;
+    align-items: center;
     justify-content: center;
-  }
+    height: 100vh;
+    color: white;
+}
 
-  h1, p, button {
-    font-size: 16px; /* Scale down fonts for better readability */
-  }
+/* Container Styles */
+.container {
+    width: 80vw;
+    height: 90vh;
+    background-color: rgba(17, 25, 40, 0.75);
+    backdrop-filter: blur(19px) saturate(180%);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    display: flex;
+    overflow: hidden; /* Prevents overflow issues */
 }
